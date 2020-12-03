@@ -1,20 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button>home</ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Valor 1</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter a number">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Valor 2</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Number">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+</div>
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Calculadora</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading"> Hola!</h4>
+    <p>Esperamos que la calculadora haya sido de ayuda.</p>
+    <hr>
+    <p class="mb-0">¡Comparte con tus amigos!.</p>
   </div>
+
+  <div id="container">
+    valor 1
+    <input type="number" name= "" [(ngModel)]= "variable" />
+    <br/>
+    <span style="color: violet">Valor 2:</span>
+    <input type= "number" name ="" id="" [(ngModel)]= "variable2" />
+    <strong  *ngIf="falso_verdadero" >Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+   
+
+    <button type="button" class="btn btn-outline-primary">Sumar</button>
+{{resultado}}
+
+<button type="button" class="btn btn-outline-primary">Restar</button>
+{{resultado}}
+
+<button type="button" class="btn btn-outline-primary">Multiplicar</button>
+{{resultado}}
+
+<button type="button" class="btn btn-outline-primary">Dividir</button>
+{{resultado}}
+{{ 'El resultado es ' + operacion + ':' + resultado}}
+  </div>
+  <button type="button" [routerLink]="'/login'" class="btn btn-dark">Login</button>
+  <button type="button" [routerLink]="'/detalles'" class="btn btn-dark">Detalles</button>
+<button type="button" [routerLink]="'/perfil'" class="btn btn-dark">Perfil</button>
+<button type="button" [routerLink]="'/registrar'" class="btn btn-dark">Registrar</button>
+
 </ion-content>
+

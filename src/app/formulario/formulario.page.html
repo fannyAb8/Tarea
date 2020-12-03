@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button>formulario</ion-menu-button>
+    </ion-buttons>
+    <ion-title>formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nombre</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="nombre" placeholder="nombre">
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Precio</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="precio" placeholder="$ precio">
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2" (click)="guardarProducto()">Guardar</button>
+</form>
+<div *ngFor="let producto of productos">
+  <div>{{producto.nombre}}</div>
+  <div>{{producto.precio}}</div>
+</div>
+  </div>
+
+</ion-content>
