@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoPage implements OnInit {
 
+  mostrar_texto = false;
+
   nombre="";
   email="";
   asunto="";
@@ -31,6 +33,7 @@ export class ContactoPage implements OnInit {
   this.asunto="";
   this.mensaje="";
 
+  this.mostrar_texto = true;
   console.log("Enviar");
 }
 }
